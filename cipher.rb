@@ -46,7 +46,7 @@ def caesar_cipher(str, shift, unshift = nil)
     string.each do |x|
       translated_array << if !letter?(x)
                             x
-                          elsif is_upper?(x)
+                          elsif upper?(x)
                             alpha[alpha_shift.index(x.downcase)].upcase
                           else
                             alpha[alpha_shift.index(x)]
